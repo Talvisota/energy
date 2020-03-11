@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RestService } from '../rest.service';
 import { MessageService } from '../order/message/message.service';
 
@@ -7,18 +7,16 @@ import { MessageService } from '../order/message/message.service';
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.css']
 })
-export class LandingComponent implements OnInit {
+export class LandingComponent {
 
 
   constructor(private orderService: RestService, private messageService: MessageService) { }
 
-  ngOnInit() {
 
-  }
+  // resets order count, responds with alert if something went wrong
   resetApi() {
     this.orderService.ResetData().subscribe(e => {
       if(e !== 'success') {
-        this.messageService.log(e);
         this.messageService.log('Fehler beim Reset');
       }
     })
