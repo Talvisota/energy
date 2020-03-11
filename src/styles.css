@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+input.ng-dirty.ng-invalid {
+  border-color: red
+}
+.spacer {
+  margin-top: 2em;
+}
+.container {
+  margin: auto;
+  margin-top: 30px;
+  -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+  background: #000;
+  color: #fff;
+  padding: 30px 45px 59px;
+}
+body {
+  background-color: #333;
+}
+h1 {
+  color: #4287f5
+}
+h2 {
+  color: #f5b942;
+  margin-top: 10px
+}
+.logo-wrapper {
+  max-width: 14.5em;
+  height: 5em;
+  float: right;
+}
+img {
+  width: 100%;
+  height: auto;
+}

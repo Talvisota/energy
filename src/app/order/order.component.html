@@ -1,0 +1,48 @@
+<form [formGroup]="form" id="order" *ngIf="!orderSuccess; else success">
+  <div>
+    <div class="radio col-6">
+      <label for="Blueberry"> <input type="radio" formControlName="geschmacksrichtung" value="Blueberry"
+          name="geschmacksrichtung">Blueberry</label>
+    </div>
+    <div class="radio col-6">
+      <label> <input type="radio" formControlName="geschmacksrichtung" value="Lemongrass"
+          name="geschmacksrichtung">Lemongrass</label>
+    </div>
+    <div class="radio col-6">
+      <label for="Strawberry"> <input class="" type="radio" formControlName="geschmacksrichtung" value="Strawberry"
+          name="geschmacksrichtung">Strawberry</label>
+    </div>
+  </div>
+  <div class="form-group col-6">
+    <label for="vorname">Vorname:</label>
+    <input class="form-control" formControlName="vorname" name="vorname" type="text">
+  </div>
+  <div class="form-group col-6">
+    <label for="nachname">Nachname:</label>
+    <input class="form-control" formControlName="nachname" class="form-control" name="nachname" type="text">
+  </div>
+  <div class="form-group col-6">
+    <label for="email">E-Mail:</label>
+    <input formControlName="email" class="form-control" name="email" type="email">
+  </div>
+  <div class="form-group col-6">
+    <label for="strasse">Strasse/Nr.:</label>
+    <input formControlName="strasse" class="form-control" name="strasse" type="text">
+  </div>
+  <div class="form-group col-6">
+    <label for="plz">PLZ:</label>
+    <input formControlName="plz" class="form-control" name="plz" type="text">
+  </div>
+  <div class="form-group col-6">
+    <label for="ort">Ort:</label>
+    <input formControlName="ort" class="form-control" name="ort" type="text">
+  </div>
+  <div class="form-group col-6">
+    <label for="tel">Telefon:</label>
+    <input formControlName="tel" class="form-control" name="tel" type="tel">
+  </div>
+  <button class="button" [disabled]="!valid" (click)="orderSample(form.value)">Bestellen</button>
+</form>
+<ng-template #success>
+  <div>Vielen Dank für Ihre Bestellung!</div>
+</ng-template>

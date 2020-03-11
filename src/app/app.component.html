@@ -1,0 +1,9 @@
+<div class="container">
+<app-header></app-header>
+<app-landing></app-landing>
+<div>Noch {{samples}} von {{maxSample}} verfügbar</div>
+<div class="spacer"></div>
+<app-order *ngIf="enableForm"></app-order>
+<div class="spacer"></div>
+<app-footer></app-footer>
+</div>
