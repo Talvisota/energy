@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RestService } from '../rest.service';
+import { MessageService } from '../order/message/message.service';
 
 @Component({
   selector: 'app-landing',
@@ -8,10 +10,17 @@ import { Component, OnInit } from '@angular/core';
 export class LandingComponent implements OnInit {
 
 
-  constructor() { }
+  constructor(private orderService: RestService, private messageService: MessageService) { }
 
   ngOnInit() {
 
   }
-
+  resetApi() {
+    this.orderService.ResetData().subscribe(e => {
+      if(e !== 'success') {
+        this.messageService.log(e);
+        this.messageService.log('Fehler beim Reset');
+      }
+    })
+  }
 }

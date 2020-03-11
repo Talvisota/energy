@@ -52,5 +52,4 @@ export class OrderComponent implements OnInit, AfterViewInit, OnDestroy {
       }
     });
   }
-
 }
